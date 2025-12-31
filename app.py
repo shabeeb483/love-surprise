@@ -159,6 +159,7 @@ elif st.session_state.step == 4:
     st.image("images/memory2.jpg", caption="Where time felt slower 🤍")
     st.image("images/memory3.jpg", caption="One of my favorite memories ✨")
 
+
     if st.button("💌 Read My Letter"):
         st.session_state.step = 5
         st.rerun()
@@ -170,32 +171,32 @@ elif st.session_state.step == 5:
         <h1>For You 🤍</h1>
 
         <p>
-        This page was not made to impress you,<br>
-        it was made to remind you.
+            This page was not made to impress you,<br>
+            it was made to remind you.
         </p>
 
         <p>
-        Remind you that you matter,<br>
-        that your presence makes things lighter,<br>
-        and that your smile means more than you realize.
+            Remind you that you matter,<br>
+            that your presence makes things lighter,<br>
+            and that your smile means more than you realize.
         </p>
 
         <p>
-        I hope this year gives you calm mornings,<br>
-        peaceful nights,<br>
-        and moments where you feel truly understood.
+            I hope this year gives you calm mornings,<br>
+            peaceful nights,<br>
+            and moments where you feel truly understood.
         </p>
 
         <p>
-        No matter what changes around us,<br>
-        I hope you always feel valued,<br>
-        supported,<br>
-        and deeply cared for.
+            No matter what changes around us,<br>
+            I hope you always feel valued,<br>
+            supported,<br>
+            and deeply cared for.
         </p>
 
         <p>
-        This surprise is small,<br>
-        but the thought behind it is endless 💖
+            This surprise is small,<br>
+            but the thought behind it is endless 💖
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -203,3 +204,4 @@ elif st.session_state.step == 5:
     if st.button("🔁 Start Again"):
         st.session_state.step = 1
         st.rerun()
+
