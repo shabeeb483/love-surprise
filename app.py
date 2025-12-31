@@ -10,7 +10,7 @@ st.set_page_config(
 )
 
 # ---------------- PASSWORD PROTECTION ----------------
-PASSWORD = "barzu"   # change this
+PASSWORD = "cutiepie"   # change this secret
 
 if "auth" not in st.session_state:
     st.session_state.auth = False
@@ -95,10 +95,6 @@ for _ in range(8):
         unsafe_allow_html=True
     )
 
-# ---------------- MUSIC PLAYER ----------------
-st.markdown("### 🎵 A little music for this moment")
-st.audio("music.mp3", format="audio/mp3")
-
 # ---------------- STEP STATE ----------------
 if "step" not in st.session_state:
     st.session_state.step = 1
@@ -121,6 +117,7 @@ elif st.session_state.step == 2:
     st.markdown("""
     <div class="card">
         <h2>Let’s leave the worries behind 🌸</h2>
+        <p>Just for this moment… nothing else matters.</p>
     </div>
     """, unsafe_allow_html=True)
 
