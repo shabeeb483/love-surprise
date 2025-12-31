@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-import time
+import os
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -9,8 +9,8 @@ st.set_page_config(
     layout="centered"
 )
 
-# ---------------- PASSWORD PROTECTION ----------------
-PASSWORD = "cutiepie"   # change this secret
+# ---------------- PASSWORD ----------------
+PASSWORD = "cutiepie"   # change this
 
 if "auth" not in st.session_state:
     st.session_state.auth = False
@@ -95,6 +95,13 @@ for _ in range(8):
         unsafe_allow_html=True
     )
 
+# ---------------- SAFE IMAGE FUNCTION ----------------
+def safe_image(path, caption):
+    if os.path.exists(path):
+        st.image(path, caption=caption)
+    else:
+        st.warning(f"⚠️ Missing image: {path}")
+
 # ---------------- STEP STATE ----------------
 if "step" not in st.session_state:
     st.session_state.step = 1
@@ -104,7 +111,7 @@ if st.session_state.step == 1:
     st.markdown("""
     <div class="card">
         <h1>Hey You 💕</h1>
-        <h3>Tap gently… this page was made only for you ✨</h3>
+        <h3>This page was made only for you ✨</h3>
     </div>
     """, unsafe_allow_html=True)
 
@@ -117,7 +124,6 @@ elif st.session_state.step == 2:
     st.markdown("""
     <div class="card">
         <h2>Let’s leave the worries behind 🌸</h2>
-        <p>Just for this moment… nothing else matters.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -147,7 +153,7 @@ elif st.session_state.step == 3:
         st.session_state.step = 4
         st.rerun()
 
-# ---------------- STEP 4 ----------------
+# ---------------- STEP 4 (IMAGES – FIXED) ----------------
 elif st.session_state.step == 4:
     st.markdown("""
     <div class="card">
@@ -155,53 +161,41 @@ elif st.session_state.step == 4:
     </div>
     """, unsafe_allow_html=True)
 
-    st.image("images/memory1.jpg", caption="A moment I still smile about 💕")
-    st.image("images/memory2.jpg", caption="Where time felt slower 🤍")
-    st.image("images/memory3.jpg", caption="One of my favorite memories ✨")
-
+    safe_image("images/memory1.jpg", "A moment I still smile about 💕")
+    safe_image("images/memory2.jpg", "Where time felt slower 🤍")
+    safe_image("images/memory3.jpg", "One of my favorite memories ✨")
 
     if st.button("💌 Read My Letter"):
         st.session_state.step = 5
         st.rerun()
 
-# ---------------- STEP 5 (LETTER) ----------------
+# ---------------- STEP 5 (LETTER – FIXED) ----------------
 elif st.session_state.step == 5:
     st.markdown("""
     <div class="card">
         <h1>For You 🤍</h1>
 
-        <p>
-            This page was not made to impress you,<br>
-            it was made to remind you.
-        </p>
+        <p>This page was not made to impress you,<br>
+        it was made to remind you.</p>
 
-        <p>
-            Remind you that you matter,<br>
-            that your presence makes things lighter,<br>
-            and that your smile means more than you realize.
-        </p>
+        <p>Remind you that you matter,<br>
+        that your presence makes things lighter,<br>
+        and that your smile means more than you realize.</p>
 
-        <p>
-            I hope this year gives you calm mornings,<br>
-            peaceful nights,<br>
-            and moments where you feel truly understood.
-        </p>
+        <p>I hope this year gives you calm mornings,<br>
+        peaceful nights,<br>
+        and moments where you feel truly understood.</p>
 
-        <p>
-            No matter what changes around us,<br>
-            I hope you always feel valued,<br>
-            supported,<br>
-            and deeply cared for.
-        </p>
+        <p>No matter what changes around us,<br>
+        I hope you always feel valued,<br>
+        supported,<br>
+        and deeply cared for.</p>
 
-        <p>
-            This surprise is small,<br>
-            but the thought behind it is endless 💖
-        </p>
+        <p>This surprise is small,<br>
+        but the thought behind it is endless 💖</p>
     </div>
     """, unsafe_allow_html=True)
 
     if st.button("🔁 Start Again"):
         st.session_state.step = 1
         st.rerun()
-
