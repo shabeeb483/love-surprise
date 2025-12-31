@@ -134,7 +134,7 @@ elif st.session_state.step == 3:
         <h1>🎟 GOLDEN LOVE TICKET 🎟</h1>
         <h3>Issued Only For You 💖</h3>
         <hr>
-        <h2>Unlimited test Love</h2>
+        <h2>Unlimited  Love</h2>
         <h2>Unlimited Smiles</h2>
         <p>Valid Forever ♾</p>   
     </div> 
