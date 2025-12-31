@@ -175,24 +175,25 @@ elif st.session_state.step == 5:
     <div class="card">
         <h1>For You 🤍</h1>
 
-        <p>This page was not made to impress you,<br>
-        it was made to remind you.</p>
+        This page was not made to impress you,
+        it was made to remind you.
+        
 
-        <p>Remind you that you matter,<br>
-        that your presence makes things lighter,<br>
-        and that your smile means more than you realize.</p>
+        Remind you that you matter,
+        that your presence makes things lighter,
+        and that your smile means more than you realize.
 
-        <p>I hope this year gives you calm mornings,<br>
-        peaceful nights,<br>
-        and moments where you feel truly understood.</p>
+        I hope this year gives you calm mornings,
+        peaceful nights,
+        and moments where you feel truly understood.
 
-        <p>No matter what changes around us,<br>
-        I hope you always feel valued,<br>
-        supported,<br>
-        and deeply cared for.</p>
+        No matter what changes around us,
+        I hope you always feel valued,
+        supported
+        and deeply cared for
 
-        <p>This surprise is small,<br>
-        but the thought behind it is endless 💖</p>
+        This surprise is small,<br>
+        but the thought behind it is endless 💖
     </div>
     """, unsafe_allow_html=True)
 
